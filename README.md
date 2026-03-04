@@ -1,7 +1,6 @@
 # DevMate CLI
 
-DevMate CLI is a simple **command line tool built with Node.js and TypeScript** for the SESD Workshop assignment.
-
+DevMate CLI is a simple **command line tool built with Node.js and TypeScript**.
 The tool allows users to run useful commands directly from the terminal such as fetching Pokémon information, checking weather, getting GitHub user data, generating passwords, and more.
 
 ---
