@@ -1,19 +1,91 @@
-# devmate-cli
 # DevMate CLI
 
-DevMate CLI is a simple command line tool built using **Node.js and TypeScript** as part of the SESD Workshop CLI project.
+DevMate CLI is a simple **command line tool built with Node.js and TypeScript** for the SESD Workshop assignment.
 
-The tool provides different useful commands that can be executed directly from the terminal such as getting Pokémon details, weather information, GitHub user details, generating passwords, and more.
+The tool allows users to run useful commands directly from the terminal such as fetching Pokémon information, checking weather, getting GitHub user data, generating passwords, and more.
 
 ---
 
 ## Features
 
 * Built using **Node.js + TypeScript**
-* Uses **Object-Oriented Programming (OOP)** for services
+* Structured using **Object-Oriented Programming (OOP)**
 * Includes **10 custom CLI commands**
-* Integrates **multiple external APIs**
-* Simple modular project structure
+* Integrates **multiple public APIs**
+* Runs as a **real CLI tool (`devmate`)**
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Mridul012/devmate-cli.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd devmate-cli
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Compile the TypeScript project:
+
+```bash
+npx tsc
+```
+
+Link the CLI globally:
+
+```bash
+npm link
+```
+
+Now the CLI command will be available globally as:
+
+```bash
+devmate
+```
+
+---
+
+## Usage
+
+General command format:
+
+```bash
+devmate <command>
+```
+
+Example:
+
+```bash
+devmate greet Mridul
+```
+
+---
+
+## Command Reference
+
+| Category | Command                       | Description                      | Example                         |
+| -------- | ----------------------------- | -------------------------------- | ------------------------------- |
+| Social   | `devmate greet <name>`        | Personalized greeting message    | `devmate greet Mridul`          |
+| Gaming   | `devmate pokemon <name>`      | Fetch Pokémon information        | `devmate pokemon pikachu`       |
+| Weather  | `devmate weather <city>`      | Get weather data for a city      | `devmate weather Chennai`       |
+| Git      | `devmate github <username>`   | Fetch GitHub user information    | `devmate github torvalds`       |
+| Wisdom   | `devmate quote`               | Get a random inspirational quote | `devmate quote`                 |
+| Files    | `devmate fileinfo <filename>` | Show file metadata               | `devmate fileinfo package.json` |
+| Security | `devmate password <length>`   | Generate a random password       | `devmate password 12`           |
+| Utility  | `devmate uuid`                | Generate a UUID                  | `devmate uuid`                  |
+| Utility  | `devmate time`                | Show current system time         | `devmate time`                  |
+| System   | `devmate system`              | Display system information       | `devmate system`                |
 
 ---
 
@@ -21,10 +93,10 @@ The tool provides different useful commands that can be executed directly from t
 
 This project integrates the following APIs:
 
-* Pokémon API (for Pokémon details)
-* Weather API (for weather information)
-* GitHub API (for user information)
-* Quote API (for random quotes)
+* Pokémon API → Pokémon details
+* Weather API → Weather information
+* GitHub API → GitHub user data
+* Quote API → Random quotes
 
 ---
 
@@ -54,166 +126,13 @@ src
 
 ---
 
-## Installation
+## CLI Help
 
-Clone the repository:
+To view all available commands:
 
-```
-git clone https://github.com/Mridul012/devmate-cli.git
-```
-
-Go into the project directory:
-
-```
-cd devmate-cli
-```
-
-Install dependencies:
-
-```
-npm install
+```bash
+devmate --help
 ```
 
 ---
 
-## Running the CLI
-
-Use the following command format:
-
-```
-npx ts-node src/index.ts <command>
-```
-
----
-
-## Available Commands
-
-### Greet
-
-```
-npx ts-node src/index.ts greet <name>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts greet Mridul
-```
-
----
-
-### Pokémon Info
-
-```
-npx ts-node src/index.ts pokemon <pokemon_name>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts pokemon pikachu
-```
-
----
-
-### Weather Information
-
-```
-npx ts-node src/index.ts weather <city>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts weather Chennai
-```
-
----
-
-### GitHub User Info
-
-```
-npx ts-node src/index.ts github <username>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts github torvalds
-```
-
----
-
-### Random Quote
-
-```
-npx ts-node src/index.ts quote
-```
-
----
-
-### File Info
-
-```
-npx ts-node src/index.ts fileinfo <filename>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts fileinfo package.json
-```
-
----
-
-### Generate Password
-
-```
-npx ts-node src/index.ts password <length>
-```
-
-Example:
-
-```
-npx ts-node src/index.ts password 10
-```
-
----
-
-### Generate UUID
-
-```
-npx ts-node src/index.ts uuid
-```
-
----
-
-### Current Time
-
-```
-npx ts-node src/index.ts time
-```
-
----
-
-### System Info
-
-```
-npx ts-node src/index.ts system
-```
-
----
-## Command Reference
-
-| Category | Command | Description | Example |
-|--------|--------|--------|--------|
-| Social | `devmate greet <name>` | Personalized greeting | `devmate greet Mridul` |
-| Gaming | `devmate pokemon <name>` | Get Pokémon details | `devmate pokemon pikachu` |
-| Weather | `devmate weather <city>` | Get current weather info | `devmate weather Chennai` |
-| Git | `devmate github <username>` | Fetch GitHub user details | `devmate github torvalds` |
-| Wisdom | `devmate quote` | Get a random inspirational quote | `devmate quote` |
-| Files | `devmate fileinfo <filename>` | Show file details | `devmate fileinfo package.json` |
-| Security | `devmate password <length>` | Generate random password | `devmate password 12` |
-| Utility | `devmate uuid` | Generate UUID | `devmate uuid` |
-| Utility | `devmate time` | Show current time | `devmate time` |
-| System | `devmate system` | Display system information | `devmate system` |
